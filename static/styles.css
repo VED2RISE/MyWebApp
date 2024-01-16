@@ -1,0 +1,241 @@
+@font-face {
+    font-family: "MINE";
+    src: url("lor.ttf") format('ttf'), 
+         url("lor1.woff") format('woff'),
+         url("lor2.woff2") format('woff2'),
+         url("lor3.eot") format("eot");
+  }
+
+.head{
+    font-family: "MINE", sans-serif;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff; 
+  }
+  
+  .navbar-light .navbar-brand, .navbar-light .head {
+    color: #ffffff; 
+  }
+  
+  
+  .btn-primary {
+    color: #ffffff;
+    background-color: #0062cc; 
+    border-color: #005cbf; 
+  }
+
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link:focus {
+    color: #cccccc; 
+  }
+
+
+.home_background {
+    background-image: url('/static/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+
+.linkedin {
+    margin-left: 35%;
+}
+
+.button1{
+  margin-left: 30px;
+}
+
+.portrait{
+  margin-top: 40%;
+}
+
+.portrait1{
+    margin-top: 40%;
+    margin-right: -15px;
+}
+
+
+.caption {
+  font-family: "MINE";
+  position:fixed;
+  z-index: 10;
+  font-size: 22px;
+  top: 58%;
+  left: 49.7%; 
+  transform: translate(-50%, -50%);
+  color: #fff; 
+}
+
+.caption1{
+  font-family: "MINE";
+  position:fixed;
+  z-index: 10;
+  font-size: 15px;
+  top: 62%;
+  left: 49.7%; 
+  transform: translate(-50%, -50%);
+  color: #fff; 
+}
+
+.caption2{
+  font-family: "MINE";
+  position:fixed;
+  z-index: 10;
+  font-size: 30px;
+  top: 62%;
+  left: 49.7%; 
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.caption3{
+  font-family: "MINE";
+  position:fixed;
+  z-index: 10;
+  font-size: 40px;
+  top: 69%;
+  left: 49.7%; 
+  transform: translate(-50%, -50%);
+  color: black; 
+}
+
+.caption4 {
+  font-family: "MINE";
+  margin-left: 35%;
+  margin-top: 1.9%;
+}
+
+.fixed_size {
+  width: 120px; 
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin_posts{
+  background-image: url('/static/scroll.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+
+.form_container {
+  margin-left: 5%;
+  padding: 5px;
+  margin-top: 3%;
+  max-width: 400px;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  position: absolute;  
+  top: 50%;           
+  left: 0;          
+  transform: translateY(-50%);
+}
+
+.my_btn {
+  width: 100%;
+  margin-top: 10px; 
+}
+
+.textarea1{
+  resize: none;
+  height: 100px;
+  width: 100%;
+}
+
+
+.post-container {
+  border: 3px solid #000000;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 500px;
+  height: auto;
+  margin-left: 50%;
+  margin-top: 3%;
+}
+
+.post-time {
+  font-size: 14px;
+  color: #777;
+  color: black;
+}
+
+.post-content {
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.logged-in-style {
+  border: 3px solid #000000;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 500px;
+  height: auto;
+  margin-left: 26%;
+  margin-top: 3%;
+
+}
+
+
+.admin_aboutme{
+  background-image: url('/static/scroll.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: auto;
+  overflow: hidden;
+}
+
+.admin_projects{
+  background: linear-gradient(to right, #1a2a3a, #4e6257, #7a8057, #a6a05b, #d2c05c);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.repo-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 60%;
+  text-align: center;
+}
+
+.repo-title {
+  margin: 0 0 10px 0;
+}
+
+.repo-title a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.repo-description {
+  color: #666;
+  font-size: 1em; 
+}

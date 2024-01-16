@@ -1,0 +1,67 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #000000;">
+    <div class="container">
+      <a class="head" href="{{ url_for('home')}}" style="color: #ffffff;">Ivan Smirnoff</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/posts" style="color: #ffffff;">Posts </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects" style="color: #ffffff;">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about_me" style="color: #ffffff;">About Me</a>
+          </li>
+          <li class="nav-item">
+            <!-- Conditional rendering based on authentication status -->
+            {% if logged_in %}
+              <a class="btn btn-primary button1 fixed_size" href="{{ url_for('logout', next=request.path)}}" style="color: #ffffff;">Log Out</a>
+            {% else %}
+              <button type="button" class="btn btn-primary button1 fixed_size" data-bs-toggle="modal" data-bs-target="#loginModal" style="color: #ffffff;">Admin?</button>
+            {% endif %}
+          </li>
+          <!-- Social Media Links -->
+          <li class="nav-item">
+            <a class="nav-link linkedin" href="https://www.linkedin.com/in/ivansmirnov10/" target="_blank">
+              <img src="{{ url_for('static', filename='linkedin.svg') }}" alt="LinkedIn">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/selfdedicated/" target="_blank">
+              <img src="{{ url_for('static', filename='instagram.svg') }}" alt="Instagram" class="social-icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{{ url_for('login', next=request.full_path) }}" method="post">
+          <div class="form-group mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Log in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
